@@ -10,10 +10,10 @@ import { specialKeyUsed } from './util/util.js';
 const KeyboardKeyCodesMap = {
   Escape: 27,
   z: 90,
-  ArrowLeft: 37,
-  ArrowUp: 38,
-  ArrowRight: 39,
-  ArrowDown: 40,
+  ArrowLeft: 40,
+  ArrowUp: 37,
+  ArrowRight: 38,
+  ArrowDown: 39,
   Tab: 9,
 };
 
