@@ -10,10 +10,10 @@ import { specialKeyUsed } from './util/util.js';
 const KeyboardKeyCodesMap = {
   Escape: 27,
   z: 90,
-  ArrowLeft: 40,
-  ArrowUp: 37,
-  ArrowRight: 38,
-  ArrowDown: 39,
+  ArrowLeft: 37,
+  ArrowUp: 38,
+  ArrowRight: 39,
+  ArrowDown: 40,
   Tab: 9,
 };
 
@@ -113,18 +113,18 @@ class Keyboard {
         keydownAction = 'toggleZoom';
         break;
       case getKeyboardEventKey('ArrowLeft', isKeySupported):
-        axis = 'x';
-        break;
-      case getKeyboardEventKey('ArrowUp', isKeySupported):
         axis = 'y';
         break;
-      case getKeyboardEventKey('ArrowRight', isKeySupported):
+      case getKeyboardEventKey('ArrowUp', isKeySupported):
         axis = 'x';
+        isForward = true;
+        break;
+      case getKeyboardEventKey('ArrowRight', isKeySupported):
+        axis = 'y';
         isForward = true;
         break;
       case getKeyboardEventKey('ArrowDown', isKeySupported):
-        isForward = true;
-        axis = 'y';
+        axis = 'x';
         break;
       case getKeyboardEventKey('Tab', isKeySupported):
         this._focusRoot();
